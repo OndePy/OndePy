@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onde"
+version = "0.1.0"
+description = "a python easy-to-use reactive framework"
+readme = "README.md"
+requires-python = ">=3.0"
+
+authors = [
+  { name="Gauthier de Lesquen"}
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GnuGPL License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["onde*"]
