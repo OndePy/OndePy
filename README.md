@@ -73,7 +73,7 @@ b = onde.state(5)
 def total(): return a.value + b.value
 ```
 
-### Trigger something on the change of an observable value
+### 3. Trigger something on the change of an observable value
 with the decorator ```@effect```, you can trigger a function when any observable value changes. For instace, you can do:
 
 ```(Pyhton)
