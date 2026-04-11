@@ -61,8 +61,8 @@ b = state(5)
 [a thing that tells it must be computed automatically at every single change of a or b]
 a + b
 ```
-With OndePy, the thing that tells it must be computed automatically is a decorator, ```@computed```, what means we must enwrap a function into it. 
-We wan hence do the previous example like:
+With OndePy, the thing that tells it must be computed automatically is a decorator, ```@computed```, what means we must enwrap a function into it.\ 
+We will hence do the previous example like:
 ```(Pyhton)
 import onde
 
