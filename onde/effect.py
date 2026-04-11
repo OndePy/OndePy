@@ -53,7 +53,7 @@ class Effect(_utils.ReactiveNode):
             if self._disposed:
                 return
             if self._running:
-                raise _utils.CycleError(f"Cycle détecté dans effect: {self.fn.__name__}")
+                raise _utils.CycleError(f"\033[31mError\033[0m -> Cycle in effect: {self.fn.__name__}")
             if not self._dirty:
                 self._scheduled = False
                 return
@@ -72,8 +72,8 @@ class Effect(_utils.ReactiveNode):
             result = self.fn()
             if result is not None and not callable(result):
                 raise TypeError(
-                    f"Un effect doit retourner None ou une fonction de cleanup, "
-                    f"reçu: {type(result).__name__}"
+                    f"\033[31mError\033[0m -> An effect must return None or a cleanup function"
+                    f"got {type(result).__name__}"
                 )
             with self._lock:
                 self._cleanup = result
@@ -108,7 +108,7 @@ def flush_effects() -> None:
 
             iterations += 1
             if iterations > max_iterations:
-                raise RuntimeError("Trop de réexécutions d'effets. Boucle probable.")
+                raise RuntimeError("\033[35mWarning\033[0m -> Too much effect re-executions. Probable loop. Execution stoped")
 
             eff.run()
     finally:
