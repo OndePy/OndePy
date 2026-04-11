@@ -1,4 +1,4 @@
-# OndePy
+# OndePy ![status](https://img.shields.io/badge/status-beta-orange)
 A Python easy-to-use reactive framework
 
 > [!WARNING]
