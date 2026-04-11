@@ -74,7 +74,8 @@ def total(): return a.value + b.value
 ```
 
 ### 3. Trigger something on the change of an observable value
-with the decorator ```@effect```, you can trigger a function when any observable value changes. For instace, you can do:
+with the decorator ```@effect```, you can trigger a function when any observable value changes. \ 
+For instace, you can do:
 
 ```(Pyhton)
 import onde
